@@ -1,0 +1,14 @@
+version: 0.0.1
+scripts:
+  # Script executed when the container is first loaded
+  # eg: bootstrap: poetry add pandas
+  bootstrap: |
+    npm install
+    poetry install --no-root
+icon: ./icon.png
+name: image-edit
+repository: https://github.com/oomol-flows/image-edit.git
+description: A comprehensive collection of image processing task blocks for the
+  OOMOL platform.
+displayName: Image Edit
+releaseNotes: init

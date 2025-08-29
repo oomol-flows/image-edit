@@ -1,0 +1,33 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+  - handle: blur_amount
+    description: "Blur amount (0.3-1000)"
+    json_schema:
+      type: number
+      minimum: 0.3
+      maximum: 1000
+    value: 10
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output blurred image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Blur"
+icon: ":carbon:window-black-saturation:"
+description: "Apply Gaussian blur effect to the input image"

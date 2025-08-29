@@ -1,0 +1,24 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output vintage sepia tone image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Vintage Sepia Tone"
+icon: ":carbon:user-profile-alt:"
+description: "Convert image to vintage sepia tone effect"

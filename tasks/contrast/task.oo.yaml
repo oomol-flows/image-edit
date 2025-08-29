@@ -1,0 +1,33 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+  - handle: contrast
+    description: "Contrast adjustment (0.1 to 3.0)"
+    json_schema:
+      type: number
+      minimum: 0.1
+      maximum: 3.0
+    value: 1.2
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output contrast-adjusted image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Contrast"
+icon: ":carbon:contrast:"
+description: "Adjust image contrast"

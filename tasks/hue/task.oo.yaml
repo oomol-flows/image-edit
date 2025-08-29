@@ -1,0 +1,33 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+  - handle: hue_shift
+    description: "Hue shift (-180 to 180 degrees)"
+    json_schema:
+      type: number
+      minimum: -180
+      maximum: 180
+    value: 30
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output hue-adjusted image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Hue Adjustment"
+icon: ":carbon:temperature:"
+description: "Adjust image hue (color tone)"

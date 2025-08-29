@@ -1,0 +1,24 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output horizontally flipped image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Horizontal Flip"
+icon: ":carbon:arrows-vertical:"
+description: "Flip image horizontally (left-right mirror)"

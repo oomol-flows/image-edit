@@ -1,0 +1,51 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+  - handle: sigma
+    description: "Sharpening intensity (0.1-100)"
+    json_schema:
+      type: number
+      minimum: 0.1
+      maximum: 100
+    value: 1
+    nullable: false
+
+  - handle: m1
+    description: "Smoothing factor (0.1-10)"
+    json_schema:
+      type: number
+      minimum: 0.1
+      maximum: 10
+    value: 1
+    nullable: false
+
+  - handle: m2
+    description: "Detail enhancement factor (0.1-10)"
+    json_schema:
+      type: number
+      minimum: 0.1
+      maximum: 10
+    value: 2
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output sharpened image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Sharpen"
+icon: ":carbon:edge-enhancement:"
+description: "Enhance image sharpness and details"

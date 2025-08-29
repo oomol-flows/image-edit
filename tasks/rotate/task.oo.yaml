@@ -1,0 +1,42 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:
+        widget: file
+    nullable: false
+
+  - handle: angle
+    description: "Rotation angle (degrees)"
+    json_schema:
+      type: number
+      minimum: -360
+      maximum: 360
+    value: 90
+    nullable: false
+
+  - handle: background_color
+    description: "Background color"
+    json_schema:
+      type: string
+    value: "#ffffff"
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output rotated image"
+    json_schema:
+      type: string
+      ui:
+        widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Rotate"
+icon: ":carbon:rotate-clockwise:"
+description: "Rotate image by specified angle"

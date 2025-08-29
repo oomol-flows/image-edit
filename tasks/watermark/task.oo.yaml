@@ -1,0 +1,62 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+  - handle: watermark_path
+    description: "Watermark image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+  - handle: position
+    description: "Watermark position"
+    json_schema:
+      type: string
+      enum:
+        - "top-left"
+        - "top-right"
+        - "bottom-left"
+        - "bottom-right"
+        - "center"
+    value: "bottom-right"
+    nullable: false
+
+  - handle: opacity
+    description: "Watermark opacity (0.0-1.0)"
+    json_schema:
+      type: number
+      minimum: 0.0
+      maximum: 1.0
+    value: 0.7
+    nullable: false
+
+  - handle: scale
+    description: "Watermark scale ratio (0.1-2.0)"
+    json_schema:
+      type: number
+      minimum: 0.1
+      maximum: 2.0
+    value: 0.2
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output watermarked image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Watermark"
+icon: ":carbon:stamp:"
+description: "Add watermark to image"

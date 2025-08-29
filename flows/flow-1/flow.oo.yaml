@@ -1,0 +1,15 @@
+nodes:
+  - node_id: blur#2
+    title: "图片模糊 #2"
+    inputs_from:
+      - handle: input_image
+        value: /oomol-driver/oomol-storage/image/da01c73d-88cb-48c5-8e00-20c819858f4a.png
+      - handle: blur_amount
+        value: 20
+    task: self::blur
+  - node_id: greyscale#1
+    title: "图片灰度转换 #1"
+    inputs_from:
+      - handle: input_image
+        value: /oomol-driver/oomol-storage/image/da01c73d-88cb-48c5-8e00-20c819858f4a.png
+    task: self::greyscale

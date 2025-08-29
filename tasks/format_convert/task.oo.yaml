@@ -1,0 +1,48 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+  - handle: output_format
+    description: "Target format"
+    json_schema:
+      type: string
+      enum:
+        - "jpeg"
+        - "png"
+        - "webp"
+        - "avif"
+        - "tiff"
+        - "gif"
+        - "bmp"
+    value: "png"
+    nullable: false
+
+  - handle: quality
+    description: "Image quality (1-100, for JPEG/WebP/AVIF only)"
+    json_schema:
+      type: number
+      minimum: 1
+      maximum: 100
+    value: 80
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output format-converted image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Format Conversion"
+icon: ":carbon:image-copy:"
+description: "Convert image to different formats"

@@ -1,0 +1,33 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+  - handle: brightness
+    description: "Brightness adjustment (-1.0 to 1.0)"
+    json_schema:
+      type: number
+      minimum: -1
+      maximum: 1.0
+    value: 0.2
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output brightness-adjusted image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Brightness"
+icon: ":carbon:brightness-contrast:"
+description: "Adjust image brightness"

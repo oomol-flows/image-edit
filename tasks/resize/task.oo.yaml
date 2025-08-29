@@ -1,0 +1,53 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+  - handle: width
+    description: "Target width (pixels)"
+    json_schema:
+      type: number
+      minimum: 1
+      maximum: 5000
+    nullable: true
+
+  - handle: height
+    description: "Target height (pixels)"
+    json_schema:
+      type: number
+      minimum: 1
+      maximum: 5000
+    nullable: true
+
+  - handle: fit
+    description: "Scaling mode"
+    json_schema:
+      type: string
+      enum:
+        - "cover"
+        - "contain"
+        - "fill"
+        - "inside"
+        - "outside"
+    value: inside
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output resized image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Resize"
+icon: ":carbon:fit-to-screen:"
+description: "Adjust image width and height"

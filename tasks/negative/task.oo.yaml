@@ -1,0 +1,24 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output negative effect image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Negative Effect"
+icon: ":carbon:character-negative-number:"
+description: "Convert image to negative (film) effect"

@@ -1,0 +1,24 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output grayscale image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Grayscale Conversion"
+icon: ":carbon:contrast:"
+description: "Convert color image to grayscale"

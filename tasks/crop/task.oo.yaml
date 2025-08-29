@@ -1,0 +1,56 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+  - handle: x
+    description: "Crop start X coordinate"
+    json_schema:
+      type: number
+      minimum: 0
+    value: 0
+    nullable: false
+
+  - handle: y
+    description: "Crop start Y coordinate"
+    json_schema:
+      type: number
+      minimum: 0
+    value: 0
+    nullable: false
+
+  - handle: width
+    description: "Crop width"
+    json_schema:
+      type: number
+      minimum: 1
+    value: 200
+    nullable: false
+
+  - handle: height
+    description: "Crop height"
+    json_schema:
+      type: number
+      minimum: 1
+    value: 200
+    nullable: false
+
+outputs_def:
+  - handle: image_path
+    description: "Output cropped image"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Crop"
+icon: ":carbon:crop:"
+description: "Crop image by specified coordinates and dimensions"
