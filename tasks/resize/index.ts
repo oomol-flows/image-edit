@@ -20,7 +20,7 @@ export default async function(
     context: Context<Inputs, Outputs>
 ): Promise<Outputs> {
     try {
-        const inputPath = params.input_image;
+        const inputPath = params.image_path;
         const { width, height, fit } = params;
         
         // 验证输入文件是否存在
@@ -47,7 +47,7 @@ export default async function(
             .resize(width, height, { fit })
             .toFile(outputPath);
         
-        return { output_image: outputPath };
+        return { image_path: outputPath };
     } catch (error) {
         throw new Error(`图片尺寸调整处理失败: ${error.message}`);
     }

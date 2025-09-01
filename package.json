@@ -2,5 +2,9 @@
   "private": true,
   "dependencies": {
     "sharp": "^0.34.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2"
   }
 }

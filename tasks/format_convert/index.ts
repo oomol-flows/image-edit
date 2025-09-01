@@ -19,7 +19,7 @@ export default async function(
     context: Context<Inputs, Outputs>
 ): Promise<Outputs> {
     try {
-        const inputPath = params.file_path;
+        const inputPath = params.image_path;
         const { output_format, quality } = params;
         
         if (!fs.existsSync(inputPath)) {
@@ -63,7 +63,7 @@ export default async function(
         
         await sharpInstance.toFile(outputPath);
         
-        return { output_image: outputPath };
+        return { image_path: outputPath };
     } catch (error) {
         throw new Error(`图片格式转换失败: ${error.message}`);
     }

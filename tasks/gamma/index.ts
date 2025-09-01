@@ -18,7 +18,7 @@ export default async function(
     context: Context<Inputs, Outputs>
 ): Promise<Outputs> {
     try {
-        const inputPath = params.file_path;
+        const inputPath = params.image_path;
         const gammaValue = params.gamma;
         
         if (!fs.existsSync(inputPath)) {
@@ -37,7 +37,7 @@ export default async function(
             .gamma(gammaValue)
             .toFile(outputPath);
         
-        return { output_image: outputPath };
+        return { image_path: outputPath };
     } catch (error) {
         throw new Error(`图片伽马调整失败: ${error.message}`);
     }

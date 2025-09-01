@@ -17,7 +17,7 @@ export default async function(
     context: Context<Inputs, Outputs>
 ): Promise<Outputs> {
     try {
-        const inputPath = params.file_path;
+        const inputPath = params.image_path;
         
         if (!fs.existsSync(inputPath)) {
             throw new Error(`输入文件不存在: ${inputPath}`);
@@ -35,7 +35,7 @@ export default async function(
             .negate()
             .toFile(outputPath);
         
-        return { output_image: outputPath };
+        return { image_path: outputPath };
     } catch (error) {
         throw new Error(`负片效果处理失败: ${error.message}`);
     }

@@ -21,10 +21,10 @@ export default async function(
     context: Context<Inputs, Outputs>
 ): Promise<Outputs> {
     try {
-        const { file_path, watermark_path, position, opacity, scale } = params;
+        const { image_path, watermark_path, position, opacity, scale } = params;
         
-        if (!fs.existsSync(file_path)) {
-            throw new Error(`输入文件不存在: ${file_path}`);
+        if (!fs.existsSync(image_path)) {
+            throw new Error(`输入文件不存在: ${image_path}`);
         }
         
         if (!fs.existsSync(watermark_path)) {
@@ -36,11 +36,11 @@ export default async function(
             fs.mkdirSync(outputDir, { recursive: true });
         }
         
-        const ext = path.extname(file_path);
+        const ext = path.extname(image_path);
         const outputPath = path.join(outputDir, `watermarked_${Date.now()}${ext}`);
         
         // 获取主图片信息
-        const mainImage = sharp(file_path);
+        const mainImage = sharp(image_path);
         const { width: mainWidth, height: mainHeight } = await mainImage.metadata();
         
         if (!mainWidth || !mainHeight) {
@@ -107,7 +107,7 @@ export default async function(
             }])
             .toFile(outputPath);
         
-        return { output_image: outputPath };
+        return { image_path: outputPath };
     } catch (error) {
         throw new Error(`添加水印失败: ${error.message}`);
     }

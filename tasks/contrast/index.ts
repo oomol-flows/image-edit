@@ -18,7 +18,7 @@ export default async function(
     context: Context<Inputs, Outputs>
 ): Promise<Outputs> {
     try {
-        const inputPath = params.input_image;
+        const inputPath = params.image_path;
         const contrastValue = params.contrast;
         
         if (!fs.existsSync(inputPath)) {
@@ -37,7 +37,7 @@ export default async function(
             .linear(contrastValue, -(128 * (contrastValue - 1)))
             .toFile(outputPath);
         
-        return { output_image: outputPath };
+        return { image_path: outputPath };
     } catch (error) {
         throw new Error(`图片对比度调整失败: ${error.message}`);
     }

@@ -17,7 +17,7 @@ export default async function(
     context: Context<Inputs, Outputs>
 ): Promise<Outputs> {
     try {
-        const inputPath = params.input_image;
+        const inputPath = params.image_path;
         
         // 验证输入文件是否存在
         if (!fs.existsSync(inputPath)) {
@@ -38,7 +38,7 @@ export default async function(
             .flop()
             .toFile(outputPath);
         
-        return { output_image: outputPath };
+        return { image_path: outputPath };
     } catch (error) {
         throw new Error(`图片水平翻转处理失败: ${error.message}`);
     }
