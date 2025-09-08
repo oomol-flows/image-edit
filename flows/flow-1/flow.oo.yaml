@@ -1,14 +1,2 @@
 nodes:
-  - node_id: greyscale#1
-    title: "Image Grayscale Conversion #1"
-    inputs_from:
-      - handle: image_path
-    task: self::greyscale
-  - node_id: contrast#1
-    title: "Image Contrast #1"
-    inputs_from:
-      - handle: image_path
-        value: /oomol-driver/oomol-storage/tmpapxb3nr5.jpeg
-      - handle: contrast
-        value: 1.2
-    task: self::contrast
+  []

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run:*)",
+      "Bash(npx tsc:*)",
+      "mcp__oomol__runFlow",
+      "mcp__oomol__getTaskResult"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,9 @@
+title: test-blur
+nodes:
+  - node_id: blur#1
+    task: self::blur
+    inputs_from:
+      - handle: image_path
+        value: "/app/workspace/icon.png"
+      - handle: blur_amount
+        value: 10

@@ -1,6 +1,8 @@
-# Image Processing Task Blocks
+# Traditional Image Processing Task Blocks
 
-A comprehensive collection of image processing task blocks for the OOMOL platform. These reusable components provide powerful image editing capabilities that can be combined into custom workflows.
+A comprehensive collection of **traditional image processing** task blocks for the OOMOL platform. These reusable components provide powerful conventional image editing capabilities that can be combined into custom workflows.
+
+> **Note**: This is a traditional image processing toolkit that uses conventional image processing algorithms. It does **NOT** use AI or machine learning features. For AI-powered image processing capabilities, please use dedicated AI image processing task blocks instead.
 
 ## Available Task Blocks
 
@@ -42,9 +44,10 @@ A comprehensive collection of image processing task blocks for the OOMOL platfor
 - **Batch Processing**: Chain multiple operations together
 
 ### Professional Quality
-- **High Performance**: Optimized image processing algorithms
+- **High Performance**: Optimized traditional image processing algorithms
 - **Precision Control**: Accurate parameter ranges for professional results
 - **Memory Efficient**: Streamlined processing for large images
+- **Traditional Methods**: Uses established computer vision and signal processing techniques (no AI/ML)
 
 ## Usage
 
@@ -69,4 +72,4 @@ Each task block is designed as a self-contained unit that can be:
 3. Connect blocks to create your desired processing pipeline
 4. Execute workflows to process your images
 
-These task blocks provide a foundation for building sophisticated image processing applications within the OOMOL ecosystem.
+These traditional image processing task blocks provide a foundation for building sophisticated conventional image editing applications within the OOMOL ecosystem, using proven algorithms and techniques without AI dependencies.
