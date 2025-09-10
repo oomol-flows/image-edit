@@ -8,7 +8,8 @@
       "Bash(npm run:*)",
       "Bash(npx tsc:*)",
       "mcp__oomol__runFlow",
-      "mcp__oomol__getTaskResult"
+      "mcp__oomol__getTaskResult",
+      "Read(//oomol-driver/oomol-storage/**)"
     ],
     "deny": [],
     "ask": []

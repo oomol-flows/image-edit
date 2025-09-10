@@ -1,0 +1,132 @@
+{
+  "nodes": {
+    "brightness#1": {
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    "crop#1": {
+      "rfNode": {
+        "position": {
+          "x": 600,
+          "y": 0
+        }
+      }
+    },
+    "format_convert#1": {
+      "rfNode": {
+        "position": {
+          "x": 1200,
+          "y": 0
+        }
+      }
+    },
+    "flip#1": {
+      "rfNode": {
+        "position": {
+          "x": 1800,
+          "y": 0
+        }
+      }
+    },
+    "flop#1": {
+      "rfNode": {
+        "position": {
+          "x": 2400,
+          "y": 0
+        }
+      }
+    },
+    "gamma#1": {
+      "rfNode": {
+        "position": {
+          "x": 3000,
+          "y": 0
+        }
+      }
+    },
+    "greyscale#1": {
+      "rfNode": {
+        "position": {
+          "x": 3600,
+          "y": 0
+        }
+      }
+    },
+    "hue#1": {
+      "rfNode": {
+        "position": {
+          "x": 4200,
+          "y": 0
+        }
+      }
+    },
+    "negative#1": {
+      "rfNode": {
+        "position": {
+          "x": 4800,
+          "y": 0
+        }
+      }
+    },
+    "resize#1": {
+      "rfNode": {
+        "position": {
+          "x": 5400,
+          "y": 0
+        }
+      }
+    },
+    "rotate#1": {
+      "rfNode": {
+        "position": {
+          "x": 6000,
+          "y": 0
+        }
+      }
+    },
+    "saturation#1": {
+      "rfNode": {
+        "position": {
+          "x": 6600,
+          "y": 0
+        }
+      }
+    },
+    "sepia#1": {
+      "rfNode": {
+        "position": {
+          "x": 7200,
+          "y": 0
+        }
+      }
+    },
+    "sharpen#1": {
+      "rfNode": {
+        "position": {
+          "x": 7800,
+          "y": 0
+        }
+      }
+    },
+    "contrast#1": {
+      "rfNode": {
+        "position": {
+          "x": 8400,
+          "y": 0
+        }
+      }
+    },
+    "watermark#1": {
+      "rfNode": {
+        "position": {
+          "x": 9000,
+          "y": 0
+        }
+      }
+    }
+  }
+}

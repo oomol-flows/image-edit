@@ -1,0 +1,48 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image file"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+
+outputs_def:
+  - handle: width
+    description: "Image width in pixels"
+    json_schema:
+      type: number
+      
+  - handle: height
+    description: "Image height in pixels"
+    json_schema:
+      type: number
+      
+  - handle: channels
+    description: "Number of color channels"
+    json_schema:
+      type: number
+      
+  - handle: format
+    description: "Image format (jpeg, png, webp, etc.)"
+    json_schema:
+      type: string
+      
+  - handle: size
+    description: "File size in bytes"
+    json_schema:
+      type: number
+      
+  - handle: info
+    description: "Complete image metadata"
+    json_schema:
+      type: object
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Image Info"
+icon: ":carbon:information:"
+description: "Get comprehensive information about an image file including dimensions, format, channels, and metadata"

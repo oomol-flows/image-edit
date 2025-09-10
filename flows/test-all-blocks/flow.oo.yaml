@@ -1,0 +1,143 @@
+title: test-all-blocks
+nodes:
+  - node_id: brightness#1
+    task: self::brightness
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+      - handle: brightness
+        value: 0.2
+
+  - node_id: crop#1
+    task: self::crop
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+      - handle: x
+        value: 100
+      - handle: y
+        value: 100
+      - handle: width
+        value: 300
+      - handle: height
+        value: 300
+
+  - node_id: format_convert#1
+    task: self::format_convert
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+      - handle: output_format
+        value: png
+      - handle: quality
+        value: 80
+
+  - node_id: flip#1
+    task: self::flip
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+
+  - node_id: flop#1
+    task: self::flop
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+
+  - node_id: gamma#1
+    task: self::gamma
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+      - handle: gamma
+        value: 1.5
+
+  - node_id: greyscale#1
+    task: self::greyscale
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+
+  - node_id: hue#1
+    task: self::hue
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+      - handle: hue_shift
+        value: 60
+
+  - node_id: negative#1
+    task: self::negative
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+
+  - node_id: resize#1
+    task: self::resize
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+      - handle: width
+        value: 400
+      - handle: height
+        value: 300
+      - handle: fit
+        value: inside
+
+  - node_id: rotate#1
+    task: self::rotate
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+      - handle: angle
+        value: 45
+      - handle: background_color
+        value: "#ffffff"
+
+  - node_id: saturation#1
+    task: self::saturation
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+      - handle: saturation
+        value: 1.5
+
+  - node_id: sepia#1
+    task: self::sepia
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+
+  - node_id: sharpen#1
+    task: self::sharpen
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+      - handle: sigma
+        value: 1.0
+      - handle: m1
+        value: 1.0
+      - handle: m2
+        value: 2.0
+
+  - node_id: contrast#1
+    task: self::contrast
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+      - handle: contrast
+        value: 1.3
+
+  - node_id: watermark#1
+    task: self::watermark
+    inputs_from:
+      - handle: image_path
+        value: /oomol-driver/oomol-storage/contrast_1756790861657.jpg
+      - handle: watermark_path
+        value: /oomol-driver/oomol-storage/stickers/blue_test_sticker.png
+      - handle: position
+        value: bottom-right
+      - handle: opacity
+        value: 0.7
+      - handle: scale
+        value: 0.2

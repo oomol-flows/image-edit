@@ -1,0 +1,59 @@
+inputs_def:
+  - handle: image_path
+    description: "Input image file to write metadata to"
+    json_schema:
+      type: string
+      ui:widget: file
+    nullable: false
+    
+  - handle: title
+    description: "Image title"
+    json_schema:
+      type: string
+    nullable: true
+    value: null
+    
+  - handle: description
+    description: "Image description"
+    json_schema:
+      type: string
+    nullable: true
+    value: null
+    
+  - handle: author
+    description: "Image author/creator"
+    json_schema:
+      type: string
+    nullable: true
+    value: null
+    
+  - handle: copyright
+    description: "Copyright information"
+    json_schema:
+      type: string
+    nullable: true
+    value: null
+    
+  - handle: keywords
+    description: "Keywords/tags (comma-separated)"
+    json_schema:
+      type: string
+    nullable: true
+    value: null
+
+outputs_def:
+  - handle: image_path
+    description: "Output image file with embedded metadata"
+    json_schema:
+      type: string
+      ui:widget: file
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+    spawn: false
+
+title: "Write Meta"
+icon: ":carbon:document-add:"
+description: "Write metadata information to image files including title, description, author, copyright, and keywords"

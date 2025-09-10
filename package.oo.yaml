@@ -1,4 +1,4 @@
-version: 0.0.4
+version: 0.0.5
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: poetry add pandas
@@ -11,4 +11,4 @@ repository: https://github.com/oomol-flows/image-edit.git
 description: A comprehensive collection of image processing task blocks for the
   OOMOL platform.
 displayName: Image Edit
-releaseNotes: update readme
+releaseNotes: add block

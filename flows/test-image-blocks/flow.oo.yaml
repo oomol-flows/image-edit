@@ -1,0 +1,23 @@
+title: "Test Image Info and Meta Blocks"
+nodes:
+  - node_id: image_info#1
+    task: self::image-info
+    inputs_from:
+      - handle: image_path
+        value: "/oomol-driver/oomol-storage/a66c4895-77cb-4657-83ac-a9be40a19b8a.jpg"
+
+  - node_id: write_meta#1
+    task: self::write-meta
+    inputs_from:
+      - handle: image_path
+        value: "/oomol-driver/oomol-storage/a66c4895-77cb-4657-83ac-a9be40a19b8a.jpg"
+      - handle: title
+        value: "Test Image"
+      - handle: description
+        value: "This is a test image for metadata writing"
+      - handle: author
+        value: "OOMOL Test"
+      - handle: copyright
+        value: "© 2024 OOMOL Platform"
+      - handle: keywords
+        value: "test, image, metadata, oomol"
