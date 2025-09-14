@@ -12,7 +12,7 @@ type Outputs = {
     channels: number;
     format: string;
     size: number;
-    info: object;
+    info: Record<string, any>;
 };
 //#endregion
 

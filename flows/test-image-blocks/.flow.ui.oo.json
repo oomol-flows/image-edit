@@ -1,0 +1,20 @@
+{
+  "nodes": {
+    "image_info#1": {
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    "write_meta#1": {
+      "rfNode": {
+        "position": {
+          "x": 600,
+          "y": 0
+        }
+      }
+    }
+  }
+}
